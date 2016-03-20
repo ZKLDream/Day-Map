@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Rl6-i4-k7z">
+                                <rect key="frame" x="-60" y="-14" width="121" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="184" id="J9x-fv-uVy"/>
+                                    <constraint firstAttribute="width" constant="184" id="hzw-Q6-RVP"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="184" id="poK-cn-jxZ"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="标准"/>
+                                    <segment title="卫星"/>
+                                    <segment title="混合"/>
+                                </segments>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="J9x-fv-uVy"/>
+                                        <exclude reference="hzw-Q6-RVP"/>
+                                        <exclude reference="poK-cn-jxZ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="J9x-fv-uVy"/>
+                                        <include reference="hzw-Q6-RVP"/>
+                                        <include reference="poK-cn-jxZ"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="MapTypeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="bMC-cK-Wlh"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rl6-i4-k7z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HPK-mg-ErS"/>
+                            <constraint firstItem="Rl6-i4-k7z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="NC5-iY-0kA"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Rl6-i4-k7z"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="HPK-mg-ErS"/>
+                                <exclude reference="NC5-iY-0kA"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Rl6-i4-k7z"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="HPK-mg-ErS"/>
+                                <include reference="NC5-iY-0kA"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="312.75" y="300.5"/>
+        </scene>
+    </scenes>
+</document>
